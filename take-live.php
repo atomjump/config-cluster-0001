@@ -39,7 +39,7 @@
 		if($config['productionSlowChecks'] == true) {
 			$slow_checks = true;
 		}
-	}
+	
 
 	
 	
