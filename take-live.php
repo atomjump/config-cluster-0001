@@ -12,12 +12,6 @@
 	//other nomenclature e.g. by country code.
 	
  
- 	if($argv[1]) {
- 		$server_type = $argv[1];
- 	} else {
- 		echo "Usage: please pass in a server type e.g. php take-live.php\n\n";
- 		exit(0);
- 	}
  
 
 	chdir(__DIR__);
