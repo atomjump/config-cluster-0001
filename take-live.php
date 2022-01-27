@@ -93,6 +93,10 @@
 			exec("sudo cp config-override.json ..");			//Always update.
 		}
 		
+		if(file_exists("messages-override.json")) {
+			exec("sudo cp messages-override.json ..");			//Always update.
+		}
+		
 		
 		if(strpos($git_response, "--- a/hosts") !== false) {
 			
@@ -123,8 +127,12 @@
 				
 		}
 
-
-
+		//And do a forced run of the API's main script updater - this will do an update from the cluster-wide options
+		if($config['forceUpdateAfterChange'] == true) {
+			if($config['takeLivePath']) {
+				exec("sudo /usr/bin/php " . $config['takeLivePath'] . "/take-live.php --force");
+			}
+		}
 		
 	} else {
 		echo "All clear. No updates.\n";

@@ -1,3 +1,6 @@
 {
-	"productionSlowChecks": false
+	"productionSlowChecks": false,
+	"forceUpdateAfterChange": true,
+	"takeLivePath": "",
+	"takeLivePathNote": "Enter the path to the atomjump-com-config in 'takeLivePath' that you want force-run after an update to one of the cluster configs"
 }
